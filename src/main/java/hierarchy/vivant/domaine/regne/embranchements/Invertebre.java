@@ -1,4 +1,9 @@
 package hierarchy.vivant.domaine.regne.embranchements;
 
-public class Invertebre {
+import hierarchy.vivant.domaine.regne.Animal;
+
+public class Invertebre extends Animal {
+    public Invertebre(String nom) {
+        super(nom);
+    }
 }
