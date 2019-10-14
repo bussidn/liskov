@@ -5,7 +5,6 @@ import hierarchy.vivant.domaine.regne.embranchements.Vertebre;
 import hierarchy.vivant.domaine.regne.embranchements.classe.Mammifere;
 import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.Felin;
 import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Chat;
-import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Cheval;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -32,10 +31,10 @@ public class SubType {
 
     public static void main(String[] args) {
         List<Chat> collection1 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.Fur.ORANGE),
-                new Chat("Madcat", Mammifere.Fur.BLACK),
-                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
         ));
 
         //donneChevalBonus(collection1);
@@ -44,10 +43,10 @@ public class SubType {
 
 
         List<Felin> collection2 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.Fur.ORANGE),
-                new Chat("Madcat", Mammifere.Fur.BLACK),
-                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
         ));
 
         //donneChevalBonus(collection2);
@@ -56,22 +55,22 @@ public class SubType {
 
 
         List<Mammifere> collection3 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.Fur.ORANGE),
-                new Chat("Madcat", Mammifere.Fur.BLACK),
-                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
         ));
 
         //donneChevalBonus(collection3);
 
-        collection3.forEach(e -> System.out.println(e.fur()));
+        collection3.forEach(e -> System.out.println(e.fourrure()));
 
 
         List<Vertebre> collection4 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.Fur.ORANGE),
-                new Chat("Madcat", Mammifere.Fur.BLACK),
-                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
         ));
 
         //donneChevalBonus(collection4);
@@ -80,10 +79,10 @@ public class SubType {
 
 
         List<Animal> collection5 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.Fur.ORANGE),
-                new Chat("Madcat", Mammifere.Fur.BLACK),
-                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
         ));
 
         //donneChevalBonus(collection5);

@@ -27,10 +27,10 @@ public class SuperType {
 
     public static void main(String[] args) {
         List<Chat> collectionFiltree = Arrays.asList(
-                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.Fur.ORANGE),
-                new Chat("Madcat", Mammifere.Fur.BLACK),
-                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
         );
 
         afficheLesNoms(collectionFiltree);

@@ -3,18 +3,18 @@ package hierarchy.vivant.domaine.regne.embranchements.classe;
 import hierarchy.vivant.domaine.regne.embranchements.Vertebre;
 
 public class Mammifere extends Vertebre {
-    private Fur fur;
+    private fourrure fourrure;
 
-    public Mammifere(String nom, Fur fur) {
+    public Mammifere(String nom, fourrure fourrure) {
         super(nom);
-        this.fur = fur;
+        this.fourrure = fourrure;
     }
 
-    public Fur fur() {
-        return fur;
+    public fourrure fourrure() {
+        return fourrure;
     }
 
-    public enum Fur {
+    public enum fourrure {
         BROWN, TRICOLORE, BLACK, ORANGE, BLACK_AND_WHITE, GREY
     }
 }
