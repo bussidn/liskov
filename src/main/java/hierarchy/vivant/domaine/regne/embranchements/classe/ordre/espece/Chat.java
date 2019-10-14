@@ -6,4 +6,8 @@ public class Chat extends Felin {
     public Chat(String nom) {
         super(nom);
     }
+
+    public String miaou() {
+        return "meow";
+    }
 }

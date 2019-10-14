@@ -6,4 +6,6 @@ public class Vertebre extends Animal {
     public Vertebre(String nom) {
         super(nom);
     }
+
+    public void growBones() {};
 }

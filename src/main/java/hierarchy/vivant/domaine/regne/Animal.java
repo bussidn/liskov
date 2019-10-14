@@ -11,4 +11,6 @@ public class Animal {
     public String getNom() {
         return nom;
     }
+
+    public void eat() {};
 }

@@ -6,4 +6,6 @@ public class Felin extends Mammifere {
     public Felin(String nom) {
         super(nom);
     }
+
+    public void flayTail() {}
 }

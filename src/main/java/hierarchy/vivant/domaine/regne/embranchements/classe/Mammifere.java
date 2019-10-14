@@ -6,4 +6,8 @@ public class Mammifere extends Vertebre {
     public Mammifere(String nom) {
         super(nom);
     }
+
+    public String fur() {
+        return "brown";
+    }
 }
