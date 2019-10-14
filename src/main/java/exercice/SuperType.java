@@ -1,6 +1,7 @@
 package exercice;
 
 import hierarchy.vivant.domaine.regne.Animal;
+import hierarchy.vivant.domaine.regne.embranchements.classe.Mammifere;
 import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Chat;
 
 import java.util.Arrays;
@@ -26,16 +27,16 @@ public class SuperType {
 
     public static void main(String[] args) {
         List<Chat> collectionFiltree = Arrays.asList(
-                new Chat("Felix"),
-                new Chat("Garfield"),
-                new Chat("Madcat"),
-                new Chat("Grumpy Cat")
+                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.Fur.ORANGE),
+                new Chat("Madcat", Mammifere.Fur.BLACK),
+                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
         );
 
-        // afficheLesNoms(collectionFiltree);
+        afficheLesNoms(collectionFiltree);
     }
 
-    public static void afficheLesNoms(List<Animal> animaux) {
+    private static void afficheLesNoms(List<? extends Animal> animaux) {
         for (Animal animal : animaux)
             System.out.println(animal.getNom());
     }

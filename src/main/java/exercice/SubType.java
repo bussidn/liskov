@@ -32,10 +32,10 @@ public class SubType {
 
     public static void main(String[] args) {
         List<Chat> collection1 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix"),
-                new Chat("Garfield"),
-                new Chat("Madcat"),
-                new Chat("Grumpy Cat")
+                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.Fur.ORANGE),
+                new Chat("Madcat", Mammifere.Fur.BLACK),
+                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
         ));
 
         //donneChevalBonus(collection1);
@@ -44,10 +44,10 @@ public class SubType {
 
 
         List<Felin> collection2 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix"),
-                new Chat("Garfield"),
-                new Chat("Madcat"),
-                new Chat("Grumpy Cat")
+                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.Fur.ORANGE),
+                new Chat("Madcat", Mammifere.Fur.BLACK),
+                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
         ));
 
         //donneChevalBonus(collection2);
@@ -56,10 +56,10 @@ public class SubType {
 
 
         List<Mammifere> collection3 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix"),
-                new Chat("Garfield"),
-                new Chat("Madcat"),
-                new Chat("Grumpy Cat")
+                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.Fur.ORANGE),
+                new Chat("Madcat", Mammifere.Fur.BLACK),
+                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
         ));
 
         //donneChevalBonus(collection3);
@@ -68,10 +68,10 @@ public class SubType {
 
 
         List<Vertebre> collection4 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix"),
-                new Chat("Garfield"),
-                new Chat("Madcat"),
-                new Chat("Grumpy Cat")
+                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.Fur.ORANGE),
+                new Chat("Madcat", Mammifere.Fur.BLACK),
+                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
         ));
 
         //donneChevalBonus(collection4);
@@ -80,10 +80,10 @@ public class SubType {
 
 
         List<Animal> collection5 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix"),
-                new Chat("Garfield"),
-                new Chat("Madcat"),
-                new Chat("Grumpy Cat")
+                new Chat("Felix", Mammifere.Fur.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.Fur.ORANGE),
+                new Chat("Madcat", Mammifere.Fur.BLACK),
+                new Chat("Grumpy Cat", Mammifere.Fur.GREY)
         ));
 
         //donneChevalBonus(collection5);
