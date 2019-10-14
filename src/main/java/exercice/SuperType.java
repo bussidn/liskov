@@ -1,7 +1,9 @@
 package exercice;
 
 import hierarchy.vivant.domaine.regne.Animal;
+import hierarchy.vivant.domaine.regne.embranchements.Vertebre;
 import hierarchy.vivant.domaine.regne.embranchements.classe.Mammifere;
+import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.Felin;
 import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Chat;
 
 import java.util.Arrays;
@@ -26,18 +28,64 @@ public class SuperType {
      */
 
     public static void main(String[] args) {
-        List<Chat> collectionFiltree = Arrays.asList(
+        List<Chat> chats = Arrays.asList(
                 new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
                 new Chat("Garfield", Mammifere.fourrure.ORANGE),
                 new Chat("Madcat", Mammifere.fourrure.BLACK),
                 new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
         );
 
-        afficheLesNoms(collectionFiltree);
+        List<Felin> felins = Arrays.asList(
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
+        );
+
+        List<Mammifere> mammiferes = Arrays.asList(
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
+        );
+
+        List<Vertebre> vertebres = Arrays.asList(
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
+        );
+
+        List<Animal> animaux = Arrays.asList(
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
+        );
+
+        // on veut que ca compile
+        //afficheLesNoms(chats);
+        //afficheLesFourrures(chats);
+        //afficheLesNoms(felins);
+        //afficheLesFourrures(felins);
+        //afficheLesNoms(mammiferes);
+        //afficheLesFourrures(mammiferes);
+        //afficheLesNoms(vertebres);
+        //afficheLesFourrures(vertebres);
+        //afficheLesNoms(animaux);
+        //afficheLesFourrures(animaux);
+
+        // on veut PAS que ca compile ?
     }
 
-    private static void afficheLesNoms(List<? extends Animal> animaux) {
+    private static void afficheLesNoms(List<Animal> animaux) {
         for (Animal animal : animaux)
             System.out.println(animal.getNom());
+    }
+
+    private static void afficheLesFourrures(List<Mammifere> mammiferes) {
+        for (Mammifere mammifere : mammiferes)
+            System.out.println(mammifere.fourrure());
+
     }
 }
