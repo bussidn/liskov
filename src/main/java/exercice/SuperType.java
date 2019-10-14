@@ -6,6 +6,7 @@ import hierarchy.vivant.domaine.regne.embranchements.classe.Mammifere;
 import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.Felin;
 import hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Chat;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,40 +29,11 @@ public class SuperType {
      */
 
     public static void main(String[] args) {
-        List<Chat> chats = Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        );
-
-        List<Felin> felins = Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        );
-
-        List<Mammifere> mammiferes = Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        );
-
-        List<Vertebre> vertebres = Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        );
-
-        List<Animal> animaux = Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        );
+        List<Chat> chats = new ArrayList<>(someList());
+        List<Felin> felins = new ArrayList<>(someList());
+        List<Mammifere> mammiferes = new ArrayList<>(someList());
+        List<Vertebre> vertebres = new ArrayList<>(someList());
+        List<Animal> animaux = new ArrayList<>(someList());
 
         // on veut que ca compile
         //afficheLesNoms(chats);
@@ -75,7 +47,22 @@ public class SuperType {
         //afficheLesNoms(animaux);
         //afficheLesFourrures(animaux);
 
-        // on veut PAS que ca compile ?
+        // on ne veut PAS que ca compile ?
+
+        chats.forEach(e -> System.out.println(e.miaou()));
+        felins.forEach(Felin::flayTail);
+        mammiferes.forEach(e -> System.out.println(e.fourrure()));
+        vertebres.forEach(Vertebre::growBones);
+        animaux.forEach(Animal::eat);
+    }
+
+    private static List<Chat> someList() {
+        return Arrays.asList(
+                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
+                new Chat("Garfield", Mammifere.fourrure.ORANGE),
+                new Chat("Madcat", Mammifere.fourrure.BLACK),
+                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
+        );
     }
 
     private static void afficheLesNoms(List<Animal> animaux) {

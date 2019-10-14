@@ -30,65 +30,36 @@ public class SubType {
      */
 
     public static void main(String[] args) {
-        List<Chat> collection1 = new ArrayList<>(Arrays.asList(
+        List<Chat> chats = new ArrayList<>(someList());
+        List<Felin> felins = new ArrayList<>(someList());
+        List<Mammifere> mammiferes = new ArrayList<>(someList());
+        List<Vertebre> vertebres = new ArrayList<>(someList());
+        List<Animal> animaux = new ArrayList<>(someList());
+
+        // on veut que ça compile
+        //donneChevalBonus(chats);
+        //donneChevalBonus(felins);
+        //donneChevalBonus(mammiferes);
+        //donneChevalBonus(vertebres);
+        //donneChevalBonus(animaux);
+
+        // on ne veut PAS que ça compile ?
+
+        chats.forEach(e -> System.out.println(e.miaou()));
+        felins.forEach(Felin::flayTail);
+        mammiferes.forEach(e -> System.out.println(e.fourrure()));
+        vertebres.forEach(Vertebre::growBones);
+        animaux.forEach(Animal::eat);
+
+    }
+
+    private static List<Chat> someList() {
+        return Arrays.asList(
                 new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
                 new Chat("Garfield", Mammifere.fourrure.ORANGE),
                 new Chat("Madcat", Mammifere.fourrure.BLACK),
                 new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        ));
-
-        //donneChevalBonus(collection1);
-
-        collection1.forEach(e -> System.out.println(e.miaou()));
-
-
-        List<Felin> collection2 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        ));
-
-        //donneChevalBonus(collection2);
-
-        collection2.forEach(Felin::flayTail);
-
-
-        List<Mammifere> collection3 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        ));
-
-        //donneChevalBonus(collection3);
-
-        collection3.forEach(e -> System.out.println(e.fourrure()));
-
-
-        List<Vertebre> collection4 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        ));
-
-        //donneChevalBonus(collection4);
-
-        collection4.forEach(Vertebre::growBones);
-
-
-        List<Animal> collection5 = new ArrayList<>(Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
-        ));
-
-        //donneChevalBonus(collection5);
-
-        collection5.forEach(Animal::eat);
-
+        );
     }
 
     private static void donneChevalBonus(List<Animal> collection) {
