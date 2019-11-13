@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/liskov.iml" filepath="$PROJECT_DIR$/.idea/liskov.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/inheritance.iml" filepath="$PROJECT_DIR$/.idea/inheritance.iml" />
     </modules>
   </component>
 </project>
