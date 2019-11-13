@@ -1,8 +1,4 @@
-package main;
-
-import array.ArrayFiller;
-import array.ArrayGenerator;
-import array.ArrayPrinter;
+package array.covariance;
 
 public class Main {
 

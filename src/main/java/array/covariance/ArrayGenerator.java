@@ -1,8 +1,8 @@
-package array;
+package array.covariance;
 
-public class ArrayGenerator {
+class ArrayGenerator {
 
-    public static Object[] create() {
+    static Object[] create() {
         String[] stuff = new String[3];
         stuff[0] = "ok";
         stuff[1] = "hello";
