@@ -1,10 +1,10 @@
 package list.exercice;
 
 import list.exercice.hierarchy.vivant.domaine.regne.Animal;
-import list.exercice.hierarchy.vivant.domaine.regne.embranchements.Vertebre;
-import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.Mammifere;
-import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.Felin;
-import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Chat;
+import list.exercice.hierarchy.vivant.domaine.regne.embranchements.Vertebrate;
+import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.Mammal;
+import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.Felidae;
+import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Cat;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,10 +30,10 @@ public class SubType {
      */
 
     public static void main(String[] args) {
-        List<Chat> chats = new ArrayList<>(someList());
-        List<Felin> felins = new ArrayList<>(someList());
-        List<Mammifere> mammiferes = new ArrayList<>(someList());
-        List<Vertebre> vertebres = new ArrayList<>(someList());
+        List<Cat> cats = new ArrayList<>(someList());
+        List<Felidae> felidaes = new ArrayList<>(someList());
+        List<Mammal> mammals = new ArrayList<>(someList());
+        List<Vertebrate> vertebrates = new ArrayList<>(someList());
         List<Animal> animaux = new ArrayList<>(someList());
 
         // on veut que ça compile
@@ -45,20 +45,20 @@ public class SubType {
 
         // on ne veut PAS que ça compile ?
 
-        chats.forEach(e -> System.out.println(e.miaou()));
-        felins.forEach(Felin::flayTail);
-        mammiferes.forEach(e -> System.out.println(e.fourrure()));
-        vertebres.forEach(Vertebre::growBones);
+        cats.forEach(e -> System.out.println(e.miaou()));
+        felidaes.forEach(Felidae::flayTail);
+        mammals.forEach(e -> System.out.println(e.fourrure()));
+        vertebrates.forEach(Vertebrate::growBones);
         animaux.forEach(Animal::eat);
 
     }
 
-    private static List<Chat> someList() {
+    private static List<Cat> someList() {
         return Arrays.asList(
-                new Chat("Felix", Mammifere.fourrure.BLACK_AND_WHITE),
-                new Chat("Garfield", Mammifere.fourrure.ORANGE),
-                new Chat("Madcat", Mammifere.fourrure.BLACK),
-                new Chat("Grumpy Cat", Mammifere.fourrure.GREY)
+                new Cat("Felix", Mammal.Fur.BLACK_AND_WHITE),
+                new Cat("Garfield", Mammal.Fur.ORANGE),
+                new Cat("Madcat", Mammal.Fur.BLACK),
+                new Cat("Grumpy Cat", Mammal.Fur.GREY)
         );
     }
 

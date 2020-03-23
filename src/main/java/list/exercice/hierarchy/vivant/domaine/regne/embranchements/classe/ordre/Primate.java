@@ -1,9 +1,9 @@
 package list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre;
 
-import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.Mammifere;
+import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.Mammal;
 
-public class Primate extends Mammifere {
-    public Primate(String nom, fourrure fourrure) {
-        super(nom, fourrure);
+public class Primate extends Mammal {
+    public Primate(String nom, Fur Fur) {
+        super(nom, Fur);
     }
 }
