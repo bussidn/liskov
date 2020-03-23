@@ -128,7 +128,20 @@ public class PreservingLiskov {
     }
 
 //
-//    6.    -> uncomment
+//      6.  -> uncomment the body of the "addBonusMammal" method above and try to make it compile.
+//
+//          Hint :  Any "solution" should be with weird (and unsafe) casts and/or very alarming warnings.
+//                  That's why it is only asked to "try".
+//
+//      7.   At this point, we have followed Liskov + ListPreservingLiskov rules and we are left with a code that
+//           have to choose between a coherent erasure and a working body. Basically, the code will have one of these
+//           property :
+//
+//           - the method cannot accept all the types we would like it to accept
+//           - the implementation of the method is unsafe when it compiles
+//
+//
+//  II. Back to intuition
 
     private static Mammal randomBonusMammal() {
         return new Horse("Charles", Mammal.Fur.BLACK);
