@@ -5,6 +5,7 @@ import list.exercice.hierarchy.vivant.domaine.regne.embranchements.Vertebrate;
 import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.Mammal;
 import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.Felidae;
 import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Cat;
+import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.espece.Horse;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -18,7 +19,7 @@ public class PreservingLiskov {
     private static final List<Vertebrate> vertebrates = new ArrayList<>(someList());
     private static final List<Animal> animals = new ArrayList<>(someList());
 
-//    You decided that :
+    //    You decided that :
 //
 //          "if S is a subtype of T, List<S> is a subtype of List<T>
 //
@@ -71,7 +72,45 @@ public class PreservingLiskov {
 //          then you are referring to the lower part of the List<> Tree.
 //          You can instead say that the answer is : all classes that extend Mammal.
 //
+//      1. -> Can you list all subtypes of List<Mammal> ?
 //
+//      2. -> remember that Liskov principle can be seen as
+//              - any property true for a type T should also be true for all subtypes S of T
+//
+//          Considering this, if a property is true for List<Mammal>, which other types should have that property ?
+//
+//      3.  Consider the following property p :
+//          p(Type) = "I can add any Mammal instance to an instance of {Type}"
+//
+//          -> is property p true for Type = List<Mammal> ?
+//          -> according to Liskov principle, which other types that property should also be true for ?
+//
+//      4.  "addBonusMammal" is a function that adds a Mammal instance to a list.
+//          It is the embodiment of the property p(T).
+//
+//          The following method tries to call "addBonusMammal" for different types.
+//          -> uncomment the lines corresponding to the types we determined it should work for.
+//
+//          It should not compile yet. It is perfectly normal, let it be.
+    public static void followingLiskov() {
+
+//        None of the calls below  compile at first except for Mammals.
+
+//        addBonusMammal(animals);
+//        addBonusMammal(vertebrates);
+        addBonusMammal(mammals);
+//        addBonusMammal(felidaes);
+//        addBonusMammal(cats);
+    }
+
+    private static void addBonusMammal(List<Mammal> mammals) {
+        // comment below as soon as it does not compile anymore
+        mammals.add(randomBonusMammal());
+    }
+
+    private static Mammal randomBonusMammal() {
+        return new Horse("Charles", Mammal.Fur.BLACK);
+    }
 
 
     private static List<Cat> someList() {

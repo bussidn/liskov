@@ -2,8 +2,8 @@ package list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre
 
 import list.exercice.hierarchy.vivant.domaine.regne.embranchements.classe.ordre.Ongule;
 
-public class Cheval extends Ongule {
-    public Cheval(String nom, Fur Fur) {
+public class Horse extends Ongule {
+    public Horse(String nom, Fur Fur) {
         super(nom, Fur);
     }
 }
