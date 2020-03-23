@@ -19,7 +19,8 @@ public class PreservingLiskov {
     private static final List<Vertebrate> vertebrates = new ArrayList<>(someList());
     private static final List<Animal> animals = new ArrayList<>(someList());
 
-    //    You decided that :
+    //
+//    You decided that :
 //
 //          "if S is a subtype of T, List<S> is a subtype of List<T>
 //
@@ -92,6 +93,7 @@ public class PreservingLiskov {
 //          -> uncomment the lines corresponding to the types we determined it should work for.
 //
 //          It should not compile yet. It is perfectly normal, let it be.
+//
     public static void followingLiskov() {
 
 //        None of the calls below  compile at first except for Mammals.
@@ -103,10 +105,30 @@ public class PreservingLiskov {
 //        addBonusMammal(cats);
     }
 
+    //
+//      5.  The only types "addBonusMammal" should accept are the one for which the property p(T) is true.
+//          And it should accept all of them.
+//
+//          For now, it only accepts List<Mammal>
+//          But in order for our code to be as flexible as possible, we would like to be able to accept all types for
+//          which p(T) is true.
+//
+//          Basically, we want the previously uncommented lines to compile now.
+//
+//          -> Change the erasue of the "addBonusMammal" method so the previously uncommented lines compile.
+//          You will face issues with the body of the method. While it first compiles, the changes you have
+//          to make to fulfill this exercise's requirements should make it not compile anymore.
+//          Don't bother and comment the body of the method.
+//
+//          Hint : if you don't understand how to do this part, you should use a bounded wildcard
+//
     private static void addBonusMammal(List<Mammal> mammals) {
         // comment below as soon as it does not compile anymore
         mammals.add(randomBonusMammal());
     }
+
+//
+//    6.    -> uncomment
 
     private static Mammal randomBonusMammal() {
         return new Horse("Charles", Mammal.Fur.BLACK);
