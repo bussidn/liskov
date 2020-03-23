@@ -142,6 +142,14 @@ public class PreservingLiskov {
 //
 //
 //  II. Back to intuition
+//
+//    We will try to use intuition again. Forget Liskov for a short time. This time, instead of trying to
+//    create a general rule like "list is preserving Liskov", we will look at each type individually and see
+//    what the intuition has to say.
+//
+//    1. According to your own logic, which of these types should verify the property p.
+//          p(Type) = "I can add any Mammal instance to an instance of {Type}"
+
 
     private static Mammal randomBonusMammal() {
         return new Horse("Charles", Mammal.Fur.BLACK);
