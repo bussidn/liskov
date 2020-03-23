@@ -58,10 +58,20 @@ public class PreservingLiskov {
 //
 //    Exercise:
 //
-//    1. Following the rules of Liskov Principle
+//    I. Following the rules of Liskov Principle
 //
 //          We will start the exercise by considering List<Mammal> because it is the central type of our hierarchy.
 //          It will allow us to reason with the upper part of the tree or the lower part of the tree.
+//
+//          So if you think that the answer to some question is : List<Mammal> & List<Vertebrate> & List<Animal>
+//          then you are referring to the upper part of the List<> Tree.
+//          You can instead say that the answer is : all classes that are super(type) of Mammal.
+//
+//          And if you think that the answer to some question is : List<Mammal> & List<Felidae> & List<Cat>
+//          then you are referring to the lower part of the List<> Tree.
+//          You can instead say that the answer is : all classes that extend Mammal.
+//
+//
 
 
     private static List<Cat> someList() {
