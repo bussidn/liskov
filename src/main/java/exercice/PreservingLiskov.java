@@ -127,7 +127,7 @@ public class PreservingLiskov {
         mammals.add(randomBonusMammal());
     }
 
-//
+    //
 //      6.  -> uncomment the body of the "addBonusMammal" method above and try to make it compile.
 //
 //          Hint :  Any "solution" should be with weird (and unsafe) casts and/or very alarming warnings.
@@ -148,8 +148,78 @@ public class PreservingLiskov {
 //    what the intuition has to say.
 //
 //    1. According to your own logic, which of these types should verify the property p.
-//          p(Type) = "I can add any Mammal instance to an instance of {Type}"
+//       p(Type) = "I can add any Mammal instance to an instance of {Type}"
+//       Otherwise said, in which of these list would you try to add an instance of Mammal and expect the list to
+//       accept it ?
+//
+//          List<Animal>
+//          List<Vertebrate>
+//          List<Felidae>
+//          List<Cat>
+//
+//      Hint :  you should ask yourself "Can I add any Mammal instance, for example a Horse, to a list of cats ?"
+//              Do the same for every proposed type.
+//
+//    2. In the following method, change the erasure so it accepts the types you chose on the previous question
+//       and also reject all others.
+//
+    private static void alsoAddBonusMammal(List<Mammal> mammals) {
+        mammals.add(randomBonusMammal());
+    }
 
+//
+//    3. Check that it works by uncommenting tje proper lines on the following method
+//
+    public static void followingIntuition() {
+//        alsoAddBonusMammal(animals);
+//        alsoAddBonusMammal(vertebrates);
+        alsoAddBonusMammal(mammals);
+//        alsoAddBonusMammal(felidaes);
+//        alsoAddBonusMammal(cats);
+    }
+
+//
+//    We saw that the main hypothesis :
+//
+//          "If S is a subtype of T, List<S> is a subtype of List<T>"
+//
+//    lead to a contradictory situation.
+//    Besides, we found a property that is a counter example of the liskov law.
+//
+//    The difficult part when intuiting that this hypothesis is false is the ability to differentiate those two
+//    statements :
+//
+//          - each element of a List<Cat> is an instance of Cat and therefore, is also an instance of Animal,
+//              which is a true statement.
+//
+//          is a different statement than
+//
+//          - a CatList (type-wise) is also an AnimalList (type-wise), which is false
+//
+//    The sentence "a list of cat is also a list of animals", while not appearing so, is ambiguous as it can be
+//    interpreted as both meanings.
+//    Unfortunately, the intuition is leading us towards the first which is not what Liskoc principle is about.
+//    Liskov is about the whole type and its properties while our intuition think only in term of each element type.
+//    In our example of List<>, the first is the whole List<T>, while the second is only T.
+//    There's methods on the List<> container like "add" or "get" that you have to take into consideration when
+//    looking at all that List<T> has to offer (all its properties), not only T.
+//
+//    In the second part of this exercise, we saw that the "add" method of a list induced a property that not only
+//    was a counter example of the ListPreservingLiskov hypothesis but was a lot more.
+//    It was an example o verifying the ListReversingLiskov hypothesis as all the list<Mammal> that verify the
+//    property p were the list composed with the supertypes of Mammal !
+//    While a single counter example is enough to disprove an hypothesis, finding an example working is not enough
+//    to prove an hypothesis. We have to check if it's true all the time !
+//
+//    So was our intuition completely wrong ? Is a List<Animal> also a List<Mammal> ?
+//
+//    If you haven't completed the ReversingLiskov exercise, now is the time. We will explore that second hypothesis.
+//    Else go to the general conclusion.
+//
+
+//
+//    utility methods below
+//
 
     private static Mammal randomBonusMammal() {
         return new Horse("Charles", Mammal.Fur.BLACK);
