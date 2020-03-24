@@ -10,7 +10,7 @@ public class Mammal extends Vertebrate {
         this.Fur = Fur;
     }
 
-    public Fur fourrure() {
+    public Fur fur() {
         return Fur;
     }
 

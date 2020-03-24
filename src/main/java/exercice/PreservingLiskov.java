@@ -43,6 +43,8 @@ public class PreservingLiskov {
 //                                ↑                        ↑
 //                               Cat                    List<Cat>
 //
+//      ↑ is the inheritance arrow, it means that the type below is a subtype of the type above.
+//
 //    For example, considering that List<Cat> s a subtype of List<Mammal>,
 //    liskov principle is saying that :
 //
@@ -115,7 +117,7 @@ public class PreservingLiskov {
 //
 //          Basically, we want the previously uncommented lines to compile now.
 //
-//          -> Change the erasue of the "addBonusMammal" method so the previously uncommented lines compile.
+//          -> Change the erasure of the "addBonusMammal" method so the previously uncommented lines compile.
 //          You will face issues with the body of the method. While it first compiles, the changes you have
 //          to make to fulfill this exercise's requirements should make it not compile anymore.
 //          Don't bother and comment the body of the method.
@@ -140,6 +142,9 @@ public class PreservingLiskov {
 //           - the method cannot accept all the types we would like it to accept
 //           - the implementation of the method is unsafe when it compiles
 //
+//      In fact, the wanted erasure and implementation are incompatible at a very deep level.
+//      When facing such an issue, we have to consider the validity of our starting hypotheses.
+//      Either Liskov principle is wrong (it is not) or ListPreservingLiskov and the intuition are wrong. (they are)
 //
 //  II. Back to intuition
 //
@@ -168,7 +173,7 @@ public class PreservingLiskov {
     }
 
 //
-//    3. Check that it works by uncommenting tje proper lines on the following method
+//    3. Check that it works by uncommenting the proper lines on the following method
 //
     public static void followingIntuition() {
 //        alsoAddBonusMammal(animals);
