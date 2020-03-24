@@ -6,6 +6,20 @@ Inheritance is an Object-oriented Programming (OOP) core concept.
 
 ## Living hierarchy
 
+Very simplified !
+
+```
+             Animal     
+               ↑       
+           Vertebrate  
+               ↑       
+             Mammal    
+               ↑       
+            Felidae    
+               ↑       
+              Cat
+```      
+
 ## is List<Cat> a List<Animal> ?
   
 Most say yes based on intuition. It seems that a list of cats is indeed a list of animals.
